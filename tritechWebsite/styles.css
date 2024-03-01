@@ -1,0 +1,405 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
+
+/* HEADER & FOOTER */
+
+li {
+    list-style: none;
+    margin: 0 5px;
+    font-size: 18px;
+}
+
+nav a {
+    color: rgb(221, 232, 246);
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: #000e77;
+    padding: 5px 10px;
+    font-size: .9rem;
+    align-items: center;
+}
+
+.dropbtn {
+    width: fit-content;
+}
+
+.dropbtn div {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(221, 232, 246);
+    margin: 6px 0;
+}
+
+.dropdown {
+    position: relative;
+    left: 0;
+}
+
+.header-nav {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    background-color: #000e77;
+    z-index: 1;
+}
+
+.header-display {
+    display: block;
+}
+
+header li {
+    margin: 20px 10px;
+}
+
+
+
+.header-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    color: rgb(221, 232, 246);
+    width: 85vw;
+    text-align: right;
+}
+
+.header-banner h1 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #1b1b27;
+    color: rgb(175, 200, 230);
+    padding: 15px;
+    margin-top: 25px;
+    /*width: 100vw;*/
+}
+
+.footer-wrapper img {
+    display: none;
+}
+
+h2 {
+    font-style: italic;
+    font-size: 1em;
+}
+
+h4, h5 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+h5 {
+    text-decoration: underline;
+    color: rgb(221, 232, 246);
+    padding-bottom: 20px;
+}
+
+.contact {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footer-nav h5 {
+    display: none;
+}
+
+.footer-nav a, address a {
+    color: rgb(175, 200, 230);
+    text-decoration: none;
+    word-wrap: break-word;
+}
+
+nav ul {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+a:hover, a:active, a:focus {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+a:active {
+    color: #00000c;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.banner {
+    display: none;
+    height: 100px;
+    grid-template-rows: 45% 45%;
+    grid-template-columns: 120px;
+    padding: 60px 0px 20px 10px;
+    color: #000e77;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+   /* background-image: url(banner\ background.jpg);
+    background-size: cover;*/
+}
+
+.banner h1, .banner h2 {
+    margin-top: .5em;
+    grid-column-start: 2;
+} 
+
+h1 {
+    font-size: 2rem;
+}
+
+.banner h2 {
+    grid-row-start: 2;
+    padding-left: 10px;
+}
+
+.banner > img {
+    height: 100px;
+   /* mix-blend-mode: multiply;*/
+}
+
+.serviceswrap h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+    color: #000e77;
+    text-decoration: underline;
+}
+
+
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: underline;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.missionwrap, .serviceswrap {
+    margin: 80px 0 40px 0;
+}
+
+
+
+.missionwrap, .appraiserswrap, .historywrap {
+    padding: 20px;
+    /*width: 100vw;*/
+}
+
+.jesseimg, .jp-img {
+    background-color: #1b1b27;
+    /*padding: 15px;*/
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.jp, .jesse {
+    max-width: 300px;
+    text-align: center;
+    margin: 40px 0;
+    box-shadow: 10px 10px 10px 5px #1b1b27;
+    padding: 20px;
+    background-color: rgb(221, 232, 246);
+}
+
+.appraiserswrap {
+    background-color: #000e77;
+}
+
+.appraiserswrap h3 {
+    color: rgb(221, 232, 246);
+}
+
+.appraisers {
+   padding: 0 20px;
+}
+
+
+@media only screen and (min-width: 480px) {
+
+
+    .header-banner {
+        display: none;
+    }
+
+    .dropbtn {
+        display: none;
+    }
+
+    header {
+        height: 2rem;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .header-nav {
+        display: flex;
+        position: relative;
+        text-align: center;
+        justify-content: space-around;
+    }
+
+    header li {
+        margin: 0 0px;
+    }
+    
+.footer-wrapper {
+    display: flex;
+    padding-bottom: 20px;
+    /*width: 70vw;*/
+    justify-content: space-around;
+}
+
+footer {
+    
+    padding: 30px 10px 0px 10px;
+}
+
+.footer-wrapper img {
+    display:block;
+    max-width: 100%;
+}
+
+.footer-img {
+    display: flex;
+    align-items: center;
+}
+
+.contact {
+    text-align: left;
+}
+
+.footer-nav h5 {
+    display: block;
+}
+
+.footer-nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    height: 120px;
+}
+
+.copyright {
+    padding: 20px;
+}
+
+h5 {
+    padding-bottom: 40px;
+}
+
+.banner {
+    display: grid;
+}
+
+.appraisers, .mission, .history, .jp, .jesse, .appraiserswrap {
+    margin: 0px;
+    padding: 0px;
+}
+
+.appraiserswrap {
+    padding-top: 25px;
+}
+
+
+
+.jp, .jesse {
+    max-width: 2000px;
+    /*width: 49%;*/
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    display: grid;
+    grid-template: 45px / 1fr 1fr 1fr;
+}
+
+.jp {
+    margin: 25px 0 80px 0;
+}
+
+.jp-profile {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+    
+}
+
+.profile {
+    box-shadow: 10px 10px 10px 5px #1b1b27;
+    background-color: rgb(221, 232, 246);
+    margin: 0 25px;
+    display: grid;
+    max-width: 780px;
+}
+
+.jp-img{
+    display: flex;
+    grid-row: 1 / 3;
+    align-items: center;
+    /*margin-right: 25px;*/
+    background-color: #1b1b27;
+}
+
+
+/*.jesse {
+    padding: 0 50px 0 25px;
+}*/
+
+.jesse-profile {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+
+.appraisers h4, h3 {
+    font-size: 32px;
+}
+
+.jeese img, .jp-img {
+    aspect-ratio: 16 / 9;
+}
+
+.jesseimg {
+    grid-column-start: 3; 
+    grid-row: 1 / 3;  
+}
+
+
+}
