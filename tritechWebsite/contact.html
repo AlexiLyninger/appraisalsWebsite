@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>Tritech Appraisals Home</title>
+</head>
+<body>
+    <header>
+
+        <div id="menu" class="dropdown">
+            <div class="dropbtn"> 
+               <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        
+            <nav>
+                <ul  id="links" class="header-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="asa.html">ASA</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="header-banner">
+            <h1>Tritech Appraisals</h1>
+            <h2>Integrity, Service, Professionalism</h2>
+        </div>
+
+    </header>
+    
+    <main>
+
+        <div class="banner">
+
+            <img src="Tritech Appraisals Logo.jpg" alt="Tritech Appraisals logo">
+            <h1>Tritech Appraisals</h1>
+            <h2>Integrity, Service, Professionalism</h2>
+
+        </div>
+
+        <div class="contact-form">
+
+            <h1>Contact us today!</h1>
+            <form action="/api/formHandling" method="POST">
+                
+                <ul>
+                    <li>
+                        <label for="name">
+                            <span>Name: </span>
+                            <span aria-label="required">*</span>
+                        </label>
+                        <input type="text" id="name" name="name" placeholder="your name..."/>
+                    </li>
+                    <li>
+                        <label for="phone">
+                            <span>Phone: </span>
+                            <span aria-label="required">*</span>
+                        </label>
+                        <input type="tel" id="phone" name="phone" placeholder="(xxx)xxx-xxxx"/>
+                    </li>
+                    <li>
+                        <label for="mail">
+                            <span>Email: </span>
+                            <span aria-label="required">*</span>
+                          </label>
+                          <input type="email" id="mail" name="email" required placeholder="example@email.com"/>
+                
+                    </li>
+
+                    
+                    <li>
+                        <label for="msg">Message:</label>
+                        <textarea id="msg" name="message" placeholder="how can we help?..."></textarea>
+                    </li>
+                    <li class="submit">
+                        <button type="submit">Submit</button>
+                    </li>
+                </ul>
+            </form>
+
+        </div>
+
+    </main>
+
+    <footer>        
+        
+        <div class="footer-wrapper">
+            <div class="footer-img">
+                <img src="Tritech Appraisals Logo.jpg" alt="Tritech Appraisals logo">
+            </div>
+            <div class="contact">
+                <h5>Contact</h5>
+                
+                <address>
+                        Telephone: <a href="tel:+15023147390">(502)314-7390</a><br>
+                        Fax: <a href="tel:+18665913621">(866)591-3621</a><br>
+                        Email: <a href="mailto:JP@Tritechappraisals.com">JP@Tritechappraisals.com</a><br>
+                        Postal address: P.O. Box 91919 <br>
+                        Louisville, KY 40291
+                </address>
+            </div>
+
+            <div class="footer-nav">
+                
+                <h5>Navigation</h5>
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="asa.html">ASA</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2002 Tritech Appraisals</p>
+        </div>
+
+    </footer>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
