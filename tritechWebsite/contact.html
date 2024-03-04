@@ -14,6 +14,8 @@
     <title>Tritech Appraisals Home</title>
 </head>
 <body>
+    <div id="page-container">
+        <div id ="content-wrap">
     <header>
 
         <div id="menu" class="dropdown">
@@ -25,7 +27,7 @@
         
             <nav>
                 <ul  id="links" class="header-nav">
-                    <li><a href="/">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="asa.html">ASA</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -54,7 +56,7 @@
         <div class="contact-form">
 
             <h1>Contact us today!</h1>
-            <form action="/api/formHandling" method="POST">
+            <form action="https://getpantry.cloud/apiv1/pantry/4bc65e8f-3a2f-45b4-a9dc-364497314aea/basket/tritech" method="POST" novalidate>
                 
                 <ul>
                     <li>
@@ -62,38 +64,48 @@
                             <span>Name: </span>
                             <span aria-label="required">*</span>
                         </label>
-                        <input type="text" id="name" name="name" placeholder="your name..."/>
+                        <input type="text" id="name" name="name" placeholder="your name..." required/>
+                        <div id="name_error" class="error hidden">Required Field</div>
+
                     </li>
                     <li>
                         <label for="phone">
                             <span>Phone: </span>
                             <span aria-label="required">*</span>
                         </label>
-                        <input type="tel" id="phone" name="phone" placeholder="(xxx)xxx-xxxx"/>
+                        <input type="tel" id="phone" name="phone" placeholder="(xxx)xxx-xxxx" required/>
+                        <div id="phone_error" class="error hidden">Please provide a valid phone number</div>
                     </li>
                     <li>
-                        <label for="mail">
+                        <label for="email">
                             <span>Email: </span>
                             <span aria-label="required">*</span>
                           </label>
-                          <input type="email" id="mail" name="email" required placeholder="example@email.com"/>
-                
+                          <input type="email" id="email" name="email" required placeholder="example@email.com" required/>
+                          <div id="email_error" class="error hidden">Please provide a valid email</div>
+
                     </li>
 
                     
                     <li>
                         <label for="msg">Message:</label>
-                        <textarea id="msg" name="message" placeholder="how can we help?..."></textarea>
+                        <textarea id="msg" name="message" placeholder="how can we help?..."> </textarea>
+                    
+                    <p id="char-count">Max 250 characters. 250/250</p>
+                    <div id="msg_error" class="error hidden">Message Exceeds Character Limit</div>
                     </li>
                     <li class="submit">
                         <button type="submit">Submit</button>
                     </li>
                 </ul>
+                <p>* Indicates a required field</p>
             </form>
 
         </div>
 
     </main>
+
+         </div>
 
     <footer>        
         
@@ -133,6 +145,8 @@
         </div>
 
     </footer>
+
+    </div>
 
     <script src="index.js"></script>
 

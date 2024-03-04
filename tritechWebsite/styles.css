@@ -95,12 +95,24 @@ header li {
     font-weight: bold;
 }
 
+#page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+
+#content-wrap {
+    padding-bottom: 350px;  
+}
+
 footer {
     background-color: #1b1b27;
     color: rgb(175, 200, 230);
     padding: 15px;
     margin-top: 25px;
-    /*width: 100vw;*/
+    position: absolute;
+    width: 97%;
+    bottom: 0;
+    height: 250px;
 }
 
 .footer-wrapper img {
@@ -261,13 +273,24 @@ h3 {
     color: #000e77;
 }
 
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  width: 150px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 form {
     margin: 0 auto;
     width: 75vw;
+    max-width: 400px;
     padding: 1em;
     border: 2px solid #000e77;
     border-radius: 1em;
     color: #000e77;
+    text-align: center;
   }
   
   ul {
@@ -282,7 +305,7 @@ form {
   
   label {
     display: inline-block;
-    width: 90px;
+    width: 75px;
     text-align: right;
   }
   
@@ -292,21 +315,18 @@ form {
     width: 65%;
     box-sizing: border-box;
     border: 1px solid #000e77;
-    border-radius: .3em;    
+    border-radius: .3em;   
+    padding: 2.5px; 
   }
   
   input:focus, input:active, textarea:active,
   textarea:focus {
-    border: 2px;
+    border: 2px solid #000e77   ;
   }
   
   textarea {
     vertical-align: top;
     height: 5em;
-  }
-  
-  .submit {
-    text-align: center;
   }
 
   .submit button {
@@ -326,6 +346,32 @@ form {
     text-decoration: underline;
 }
 
+form p {
+    font-style: italic;
+    text-align: left;
+    padding: 2em 0 0 2em;
+}
+
+#char-count {
+    text-align: right;
+    font-size: 14px;
+    padding: 0 2.5em 2em 0;
+}
+
+.err_border {
+    border: 2px solid red;
+}
+
+.error {
+    color: red;
+    font-size: 15px;
+    text-align: left;
+    padding: .5em 0 0 2.5em;
+}
+
+.hidden {
+    display: none;
+}
 
 @media only screen and (min-width: 480px) {
 
@@ -364,7 +410,7 @@ form {
 
 footer {
     
-    padding: 30px 10px 0px 10px;
+    padding: 30px 30px 0px 0px;
 }
 
 .footer-wrapper img {
@@ -394,7 +440,9 @@ footer {
 }
 
 .copyright {
-    padding: 20px;
+    padding: 20px 10px 20px 20px;
+    background-color: #1b1b27;
+    width: 100%;
 }
 
 h5 {
@@ -405,7 +453,7 @@ h5 {
     display: grid;
 }
 
-.appraisers, .mission, .history, .jp, .jesse, .appraiserswrap {
+.appraisers, .mission, .history, .jp, .jesse, .appraiserswrap, .contact-form {
     margin: 0px;
     padding: 0px;
 }
