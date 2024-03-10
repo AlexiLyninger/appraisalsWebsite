@@ -7,8 +7,6 @@ button.addEventListener('click', function() {
     const links = document.getElementById('links');
     if (links.classList.contains('header-display')) {
         links.classList.remove('header-display');
-      
-        console.log("hello");
     } else {
        
         links.classList.add('header-display');
@@ -94,5 +92,42 @@ function validateEmail(input_str) {
   }
   
   document.querySelector('form').addEventListener('submit', validateForm);
+
+  const pantryId = "8574817a-4ab1-4d34-bdb2-728cb83f6714"
+  let basketId = 1;
+  
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    const data = new FormData(event.target);
+    const value = Object.fromEntries(data.entries());
+    const fieldValue = JSON.stringify(value);
+
+    let myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+  
+
+  
+  
+  let requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: fieldValue,
+    redirect: 'follow'
+  };
+
+  
+  
+  fetch(`https://getpantry.cloud/apiv1/pantry/${pantryId}/basket/${basketId}`, requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
+
+    basketId++;  
+    
+};
+  
+  const form = document.querySelector('form');
+  form.addEventListener('submit', handleSubmit);
 
 

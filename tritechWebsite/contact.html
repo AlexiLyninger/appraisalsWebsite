@@ -56,7 +56,7 @@
         <div class="contact-form">
 
             <h1>Contact us today!</h1>
-            <form action="https://getpantry.cloud/apiv1/pantry/4bc65e8f-3a2f-45b4-a9dc-364497314aea/basket/tritech" method="POST" novalidate>
+            <form novalidate>
                 
                 <ul>
                     <li>
@@ -85,8 +85,18 @@
                           <div id="email_error" class="error hidden">Please provide a valid email</div>
 
                     </li>
-
-                    
+                    <!--
+                    <div id="prefer">
+                    <fieldset>
+                        <legend class="radio">Contact Preference</legend>
+                        <label for="r1">Phone</label>
+                        <input type="radio" id="r1" name="prefer"  value="yes" />
+                        
+                        <label class="radio" for="r2">Email</label>
+                        <input type="radio"id="r2" name="prefer" value="no" />
+                      </fieldset>
+                    </div>
+                -->
                     <li>
                         <label for="msg">Message:</label>
                         <textarea id="msg" name="message" placeholder="how can we help?..."> </textarea>
