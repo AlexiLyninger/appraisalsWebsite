@@ -96,23 +96,23 @@ header li {
 }
 
 #page-container {
-    position: relative;
+    display: flex;
     min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
 #content-wrap {
-    padding-bottom: 350px;  
+    padding-bottom: 25px;  
 }
 
 footer {
     background-color: #1b1b27;
     color: rgb(175, 200, 230);
-    padding: 15px;
+    padding: 15px 0 15px 0;
     margin-top: 25px;
-    position: absolute;
-    width: 97%;
-    bottom: 0;
-    height: 250px;
+    /*margin-bottom: 75px;
+    height: 250px;*/
 }
 
 .footer-wrapper img {
@@ -273,6 +273,7 @@ h3 {
     color: #000e77;
 }
 
+
 button, input, select, textarea {
   font-family: inherit;
   font-size: 100%;
@@ -309,8 +310,7 @@ form {
     text-align: right;
   }
   
-  input,
-  textarea {
+  input, textarea {
     font: .75em sans-serif;
     width: 65%;
     box-sizing: border-box;
@@ -327,6 +327,10 @@ form {
   textarea {
     vertical-align: top;
     height: 5em;
+  }
+
+  .submit {
+    margin-top: 2em;
   }
 
   .submit button {
@@ -355,7 +359,7 @@ form p {
 #char-count {
     text-align: right;
     font-size: 14px;
-    padding: 0 2.5em 2em 0;
+    padding: 0 2.5em 0 0;
 }
 
 .err_border {
@@ -373,6 +377,27 @@ form p {
     display: none;
 }
 
+#msg_error {
+    text-align: right;
+    margin-right: 2em;
+}
+
+legend {
+    text-decoration: underline;
+}
+#prefer {
+    margin: 1em 0 1em 2em;
+    width: 100%;
+    text-align: center;
+}
+
+legend {
+    text-align: left;
+}
+
+input[type="radio"] {
+    width: 20px;
+}
 @media only screen and (min-width: 480px) {
 
 
