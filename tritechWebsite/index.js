@@ -103,13 +103,13 @@ function validateEmail(input_str) {
     const value = Object.fromEntries(data.entries());
     const fieldValue = JSON.stringify(value);
 
-    let myHeaders = new Headers();
+    const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
   
 
   
   
-  let requestOptions = {
+  const requestOptions = {
     method: 'POST',
     headers: myHeaders,
     body: fieldValue,
@@ -118,16 +118,35 @@ function validateEmail(input_str) {
 
   
   
-  fetch(`https://getpantry.cloud/apiv1/pantry/${pantryId}/basket/${basketId}`, requestOptions)
+  await fetch(`https://getpantry.cloud/apiv1/pantry/${pantryId}/basket/${basketId}`, requestOptions)
     .then(response => response.text())
     .then(result => console.log(result))
-    .catch(error => console.log('error', error));
+    .catch(error => console.log('error', error));    
+    
+    const getOptions = {
+      method: 'GET',
+      headers: myHeaders,
+      redirect: 'follow'
+    };
+    let setText = function setText(text) {
+      let submittedContent = JSON.stringify(JSON.parse(text), null, '\n');
+      document.getElementById('confirmation').textContent = submittedContent.replace(/[\[\]\{\}]+/g, '');
+      
+    }
+  await  fetch(`https://getpantry.cloud/apiv1/pantry/${pantryId}/basket/${basketId}`, getOptions)
+      .then(response => response.text())
+      .then(result => setText(result))
+      .catch(error => console.log('error', error));
+
+      
+    document.getElementById('submitted').classList.remove('hidden');
+
+
 
     basketId++;  
-    
+  
+  
 };
   
   const form = document.querySelector('form');
   form.addEventListener('submit', handleSubmit);
-
-
