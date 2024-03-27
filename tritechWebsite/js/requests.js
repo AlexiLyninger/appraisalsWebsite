@@ -43,6 +43,12 @@ async function handleSubmit(event) {
 
   //DISPLAY MODAL
   document.getElementById("submitted").classList.remove("hidden");
+  //CLEAR FORM
+  const allInputs = document.querySelectorAll('input');
+  allInputs.forEach(singleInput => singleInput.value = '');
+
+  let msgInput = document.getElementById('msg');
+  msgInput.value = "";
 }
 
 export { handleSubmit };
