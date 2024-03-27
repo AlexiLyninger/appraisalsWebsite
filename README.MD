@@ -6,9 +6,9 @@ The form’s submitted values are stored in the Pantry API. Upon successful subm
 
 Features fulfilling Capstone Requirements:
 
-	1) Use a regular expression to validate user input and either prevent the invalid 	input or inform the user about it (in all cases prevent invalid input from being 	stored or saved).
-	2) Analyze text and display useful information about it. (e.g. word/character 	count in an input field)
-	3) Create a form and store the submitted values using an external API (e.g. a 	contact form, survey, etc).
+	1) Use a regular expression to validate user input and either prevent the invalid input or inform the user about it (in all cases prevent invalid input from being 	stored or saved).
+	2) Analyze text and display useful information about it. (e.g. word/character count in an input field)
+	3) Create a form and store the submitted values using an external API (e.g. a contact form, survey, etc).
 
 To run app:
 
