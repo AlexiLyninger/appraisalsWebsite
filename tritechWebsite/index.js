@@ -8,6 +8,7 @@ import * as modal from "./js/modal.js";
 seeDropDown();
 
 //CHARACTER COUNT
+
 runningCount();
 
 //SHOW/HIDE VALID ENTRY ERROR
@@ -34,11 +35,21 @@ function validatedSubmit() {
 
 //CALL VALIDATION/POST & GET FUNCTIONS ON SUBMIT
 const form = document.querySelector("form");
+
+(function isOnContact() {
+  if (form) {
 form.addEventListener("submit", () => {
   validateForm();
   validatedSubmit();
 });
+};
+})();
 
 //CLOSE SUBMISSION CONFIRMATION MODAL
 window.addEventListener("click", modal.windowClose);
+
+(function isModal() {
+  if (modal.span) {
 modal.span.addEventListener("click", modal.close);
+  };
+})();

@@ -11,7 +11,9 @@ const countCharacters = () => {
 
 //RUN countCharacters WHILE TYPING
 function runningCount() {
+  if (msg) {
   msg.addEventListener("input", countCharacters);
+  }
 }
 
 //SHOW/HIDE VALID ENTRY ERROR
