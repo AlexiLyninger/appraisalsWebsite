@@ -1,6 +1,6 @@
 import { seeDropDown } from "./js/dropDownMenu.js";
 import { runningCount, validCharCount, maxChars } from "./js/characterCount.js";
-import { validateName, validateEmail, validatePhoneNumber, validForm, } from "./js/validationRepo.js";
+import { validateName, validateEmail, validatePhoneNumber, validForm,} from "./js/validationRepo.js";
 import { handleSubmit } from "./js/requests.js";
 import * as modal from "./js/modal.js";
 
@@ -30,7 +30,7 @@ function validatedSubmit() {
     msgChars <= maxChars
   ) {
     handleSubmit(event);
-  };
+  }
 }
 
 //CALL VALIDATION/POST & GET FUNCTIONS ON SUBMIT
@@ -38,18 +38,24 @@ const form = document.querySelector("form");
 
 (function isOnContact() {
   if (form) {
-form.addEventListener("submit", () => {
-  validateForm();
-  validatedSubmit();
-});
-};
+    form.addEventListener("submit", () => {
+      validateForm();
+      validatedSubmit();
+    });
+  }
 })();
 
-//CLOSE SUBMISSION CONFIRMATION MODAL
+//CLOSE SUBMISSION CONFIRMATION/FAILURE MODALS
 window.addEventListener("click", modal.windowClose);
 
 (function isModal() {
   if (modal.span) {
-modal.span.addEventListener("click", modal.close);
-  };
+    modal.span.addEventListener("click", modal.close);
+  }
+})();
+
+(function isModal2() {
+  if (modal.span2) {
+    modal.span2.addEventListener("click", modal.close2);
+  }
 })();
