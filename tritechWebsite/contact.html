@@ -6,127 +6,122 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Tritech Appraisals Contact</title>
 </head>
 <body>
     <div id="page-container">
-        <div id ="content-wrap">
-            <header>
-                <div id="menu" class="dropdown">
-                    <div class="dropbtn"> 
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <nav>
-                        <ul  id="links" class="header-nav">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="asa.html">ASA</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="header-banner">
-                    <h1>Tritech Appraisals</h1>
-                    <h2>Integrity, Service, Professionalism</h2>
-                </div>
-            </header>
-            <main>
-                <div class="banner">
-                    <img src="Tritech Appraisals Logo.jpg" alt="Tritech Appraisals logo">
-                    <h1>Tritech Appraisals</h1>
-                    <h2>Integrity, Service, Professionalism</h2>
-                </div>
-                <div class="contact-form">
-                    <h1>Contact us today!</h1>
-                    <form novalidate>
-                        <ul>
-                            <li>
-                                <label for="name">
-                                    <span>Name: </span>
-                                    <span aria-label="required">*</span>
-                                </label>
-                                <input type="text" id="name" name="Name" placeholder="your name..." required/>
-                                <div id="name_error" class="error hidden">Required Field</div>
-                            </li>
-                            <li>
-                                <label for="phone">
-                                    <span>Phone: </span>
-                                    <span aria-label="required">*</span>
-                                </label>
-                                <input type="tel" id="phone" name="Phone" placeholder="(xxx)xxx-xxxx" required/>
-                                <div id="phone_error" class="error hidden">Please provide a valid phone number</div>
-                            </li>
-                            <li>
-                                <label for="email">
-                                    <span>Email: </span>
-                                    <span aria-label="required">*</span>
-                                </label>
-                                <input type="email" id="email" name="Email" required placeholder="example@email.com" required/>
-                                <div id="email_error" class="error hidden">Please provide a valid email</div>
-                            </li>
-                            <li>
-                                <label for="msg">Message:</label>
-                                <textarea id="msg" name="Message" placeholder="how can we help?..." maxlength="250"> </textarea>
-                                <p id="char-count">Max 250 characters. 250/250</p>
-                                <div id="msg_error" class="error hidden">Message Exceeds Character Limit</div>
-                            </li>
-                            <li class="submit">
-                                <button type="submit">Submit</button>
-                            </li>
-                        </ul>
-                        <p>* Indicates a required field</p>
-                    </form>
-                </div>
-            </main>
-            <div id="submitted" class="modal hidden">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h1>Thank you for contacting us!</h1>
-                    <p>Someone will reach out to you using the information you provided. We look forward to speaking with you.</p>
-                    <pre><p id="confirmation"></p></pre>
-                </div>
+        <header>
+            <div id="menu" class="header-dropdown">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>    
+            <nav>
+                <ul  id="links" class="header-nav">
+                    <li class="header-li"><a href="index.html">Home</a></li>
+                    <li class="header-li"><a href="about.html">About</a></li>
+                    <li class="header-li"><a href="asa.html">ASA</a></li>
+                    <li class="header-li"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-banner">
+                <span id="header-title">Tritech Appraisals</span>
+                <span id="header-tagline">Integrity, Service, Professionalism</span>
             </div>
-            <div id="failed" class="modal hidden">
-                <div class="modal-content">
-                    <span class="close2">&times;</span>
-                    <h1>Something went wrong...</h1>
-                    <p>Please try again later. Also feel free to reach out to us by telephone or email.</p>
-                    <address>
-                        Telephone: <a href="tel:+15023147390">(502)314-7390</a><br>
-                        Email: <a href="mailto:JP@Tritechappraisals.com">JP@Tritechappraisals.com</a>
-                    </address>
-                </div>
+        </header>
+        <aside>
+            <div class="aside">
+                <img src="Tritech Appraisals Logo.jpg" alt="Tritech Appraisals logo">
+                <span id="aside-title">Tritech Appraisals</span>
+                <span id="aside-tagline">Integrity, Service, Professionalism</span>
+            </div>
+        </aside>
+        <main>
+            <div class="contact-form">
+                <h1>Contact us today!</h1>
+                <form novalidate>
+                    <ul>
+                        <li>
+                            <label for="name">
+                                <span>Name: </span>
+                                <span aria-label="required">*</span>
+                            </label>
+                            <input type="text" id="name" name="Name" placeholder="your name..." required/>
+                            <div id="name_error" class="error hidden">Required Field</div>
+                        </li>
+                        <li>
+                            <label for="phone">
+                                <span>Phone: </span>
+                                <span aria-label="required">*</span>
+                            </label>
+                            <input type="tel" id="phone" name="Phone" placeholder="(xxx)xxx-xxxx" required/>
+                            <div id="phone_error" class="error hidden">Please provide a valid phone number</div>
+                        </li>
+                        <li>
+                            <label for="email">
+                                <span>Email: </span>
+                                <span aria-label="required">*</span>
+                            </label>
+                            <input type="email" id="email" name="Email" required placeholder="example@email.com" required/>
+                            <div id="email_error" class="error hidden">Please provide a valid email</div>
+                        </li>
+                        <li>
+                            <label for="msg">Message:</label>
+                            <textarea id="msg" name="Message" placeholder="how can we help?..." maxlength="250"> </textarea>
+                            <p id="char-count">Max 250 characters. 250/250</p>
+                            <div id="msg_error" class="error hidden">Message Exceeds Character Limit</div>
+                        </li>
+                        <li class="submit">
+                            <button type="submit">Submit</button>
+                        </li>
+                    </ul>
+                    <p>* Indicates a required field</p>
+                </form>
+            </div>
+        </main>
+        <div id="submitted" class="modal hidden">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Thank you for contacting us!</h2>
+                <p>Someone will reach out to you using the information you provided. We look forward to speaking with you.</p>
+                <pre><p id="confirmation"></p></pre>
+            </div>
+        </div>
+        <div id="failed" class="modal hidden">
+            <div class="modal-content">
+                <span class="close2">&times;</span>
+                <h2>Something went wrong...</h2>
+                <p>Please try again later. Also feel free to reach out to us by telephone or email.</p>
+                <address>
+                    Telephone: <a href="tel:+15023147390">(502)314-7390</a><br>
+                    Email: <a href="mailto:JP@Tritechappraisals.com">JP@Tritechappraisals.com</a>
+                </address>
             </div>
         </div>
         <footer>        
-            <div class="footer-wrapper">
+            <div class="footer-content">
                 <div class="footer-img">
                     <img src="Tritech Appraisals Logo.jpg" alt="Tritech Appraisals logo">
                 </div>
                 <div class="contact">
-                    <h5>Contact</h5>
+                    <span class="footer-heading">Contact</span>
                     <address>
-                            Telephone: <a href="tel:+15023147390">(502)314-7390</a><br>
-                            Fax: <a href="tel:+18665913621">(866)591-3621</a><br>
-                            Email: <a href="mailto:JP@Tritechappraisals.com">JP@Tritechappraisals.com</a><br>
-                            Postal address: P.O. Box 91919<br>
-                            Louisville, KY 40291
+                        Telephone: <a href="tel:+15023147390">(502)314-7390</a><br>
+                        Fax: <a href="tel:+18665913621">(866)591-3621</a><br>
+                        Email: <a href="mailto:JP@Tritechappraisals.com">JP@Tritechappraisals.com</a><br>
+                        Postal address: P.O. Box 91919<br>
+                        Louisville, KY 40291
                     </address>
                 </div>
                 <div class="footer-nav">
-                    <h5>Navigation</h5>
+                    <span class="footer-heading">Navigation</span>
                     <nav>
                         <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="asa.html">ASA</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li class="footer-li"><a href="index.html">Home</a></li>
+                            <li class="footer-li"><a href="about.html">About</a></li>
+                            <li class="footer-li"><a href="asa.html">ASA</a></li>
+                            <li class="footer-li"><a href="contact.html">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
