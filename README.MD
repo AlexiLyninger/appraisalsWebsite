@@ -2,7 +2,7 @@ This is a website for the appraisal company, Tritech Appraisals. The website is 
 
 On the Contact page, there is a contact form. The form uses regular expressions to validate user input. If input is not valid, a message informing the user of invalid entry is shown and submission of data is prevented. The form includes a message field with a 250 character limit that displays a character count below it.
 
-The form’s submitted values are stored in the Pantry API. Upon successful submission of the form, the submitted values are retrieved back from the API and displayed in a modal to confirm their submission.
+The form’s submitted values are stored in the Pantry API. Upon successful submission of the form, the submitted values are retrieved back from the API and displayed in a modal to confirm their submission. If the submission fails, a modal is displayed informing the user that something went wrong.
 
 Features fulfilling Capstone Requirements:
 
