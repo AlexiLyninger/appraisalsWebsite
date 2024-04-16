@@ -11,8 +11,8 @@ function close2() {
   modal2.classList.add("hidden");
 }
 
-function windowClose(event) {
-  if (event.target === modal || event.target === modal2) {
+function windowClose(e) {
+  if (e.target === modal || e.target === modal2) {
     modal.classList.add("hidden");
     modal2.classList.add("hidden");
   }

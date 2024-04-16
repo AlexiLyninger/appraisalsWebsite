@@ -1,10 +1,10 @@
-async function handleSubmit(event) {
-  event.preventDefault();
+async function handleSubmit(e) {
+  e.preventDefault();
   //ASSIGNING PANTRY AND BASKET
   const pantryId = "8574817a-4ab1-4d34-bdb2-728cb83f6714";
   let basketId = document.getElementById("email").value;
   //CONVERTING FORM DATA TO JSON
-  const data = new FormData(event.target);
+  const data = new FormData(e.target);
   const value = Object.fromEntries(data.entries());
   const fieldValue = JSON.stringify(value);
   //CREATING HEADER

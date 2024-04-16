@@ -12,4 +12,14 @@ function seeDropDown() {
   });
 }
 
-export { seeDropDown };
+function closeDropDown() {
+  window.addEventListener("click", (e) => {
+    if(e.target.className !== "menu-div" && 
+    e.target !== button &&
+    e.target.id !== "links") {
+    links.classList.remove("header-display");
+    };
+  });
+}
+
+export { seeDropDown, closeDropDown};

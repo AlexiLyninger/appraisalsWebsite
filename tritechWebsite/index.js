@@ -1,24 +1,25 @@
-import { seeDropDown } from "./js/dropDownMenu.js";
-import { runningCount, validCharCount, maxChars } from "./js/characterCount.js";
+
+import { seeDropDown, closeDropDown} from "./js/dropDownMenu.js";
+import { runningCount, maxChars } from "./js/characterCount.js";
 import { validateName, validateEmail, validatePhoneNumber, validForm,} from "./js/validationRepo.js";
 import { handleSubmit } from "./js/requests.js";
 import * as modal from "./js/modal.js";
 
 //SHOW/HIDE DROPDOWN HAMBURGER MENU
 seeDropDown();
+closeDropDown();
 
 //CHARACTER COUNT
 
 runningCount();
 
 //SHOW/HIDE VALID ENTRY ERROR
-function validateForm(event) {
-  validForm();
-  validCharCount();
+function validateForm(e) {
+  validForm(e);
 }
 
 //POST & GET AFTER VALIDATED INPUT SUBMITTED
-function validatedSubmit() {
+function validatedSubmit(e) {
   const msgChars = msg.value.length;
   const email = document.getElementById("email").value;
   const _name = document.getElementById("name").value;
@@ -29,7 +30,7 @@ function validatedSubmit() {
     validateName(_name) &&
     msgChars <= maxChars
   ) {
-    handleSubmit(event);
+    handleSubmit(e);
   }
 }
 
@@ -38,9 +39,9 @@ const form = document.querySelector("form");
 
 (function isOnContact() {
   if (form) {
-    form.addEventListener("submit", () => {
-      validateForm();
-      validatedSubmit();
+    form.addEventListener("submit", (e) => {
+      validateForm(e);
+      validatedSubmit(e);
     });
   }
 })();

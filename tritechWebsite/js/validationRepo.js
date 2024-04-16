@@ -14,34 +14,34 @@ function validatePhoneNumber(input) {
 }
 
 //SHOW/HIDE VALID ENTRY ERROR
-function validEmail() {
+function validEmail(e) {
   let email = document.getElementById("email").value;
   if (!validateEmail(email)) {
     document.getElementById("email_error").classList.remove("hidden");
     document.getElementById("email").classList.add("err_border");
-    event.preventDefault();
+    e.preventDefault();
   } else {
     document.getElementById("email_error").classList.add("hidden");
     document.getElementById("email").classList.remove("err_border");
   }
 }
-function validPhone() {
+function validPhone(e) {
   let phone = document.getElementById("phone").value;
   if (!validatePhoneNumber(phone)) {
     document.getElementById("phone_error").classList.remove("hidden");
     document.getElementById("phone").classList.add("err_border");
-    event.preventDefault();
+    e.preventDefault();
   } else {
     document.getElementById("phone_error").classList.add("hidden");
     document.getElementById("phone").classList.remove("err_border");
   }
 }
-function validName() {
+function validName(e) {
   let _name = document.getElementById("name").value;
   if (!validateName(_name)) {
     document.getElementById("name_error").classList.remove("hidden");
     document.getElementById("name").classList.add("err_border");
-    event.preventDefault();
+    e.preventDefault();
   } else {
     document.getElementById("name_error").classList.add("hidden");
     document.getElementById("name").classList.remove("err_border");
@@ -49,10 +49,10 @@ function validName() {
 }
 
 //CALL VALID ENTRY FUNCTIONS
-function validForm() {
-  validEmail();
-  validPhone();
-  validName();
+function validForm(e) {
+  validEmail(e);
+  validPhone(e);
+  validName(e);
 }
 
 export { validateName, validateEmail, validatePhoneNumber, validForm };

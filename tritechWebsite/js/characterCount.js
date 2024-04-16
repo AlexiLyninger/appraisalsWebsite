@@ -16,17 +16,4 @@ function runningCount() {
   }
 }
 
-//SHOW/HIDE VALID ENTRY ERROR
-function validCharCount() {
-  let msgChars = msg.value.length;
-  if (msgChars > maxChars) {
-    document.getElementById("msg_error").classList.remove("hidden");
-    document.getElementById("msg").classList.add("err_border");
-    event.preventDefault();
-  } else {
-    document.getElementById("msg_error").classList.add("hidden");
-    document.getElementById("msg").classList.remove("err_border");
-  }
-}
-
-export { runningCount, validCharCount, maxChars };
+export { runningCount, maxChars };
